@@ -1,1 +1,3 @@
 This is the CIS 196 Application. I configured the project, and here is the link to the Heroku page: http://serene-hollows-1055.herokuapp.com/
+
+I can't get Heroku to reflect the changes I've made. It still just shows the standard page even though, public/index has been deleted. Not sure why though, because it works fine on my local host.
