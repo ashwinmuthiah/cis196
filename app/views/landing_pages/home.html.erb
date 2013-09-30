@@ -1,0 +1,24 @@
+<h1>Ashwin Muthiah - CIS 196</h1>
+
+<p><%= link_to "My github page", "https://github.com/ashwinmuthiah" %></p>
+
+<p>Here is a form:
+
+	<form action = "aform.html" method="post">
+		<input type="radio" name="radio-btn" value="1">Choice 1
+		<input type="checkbox" name="checkbox" value="2">Check here
+		<input type="submit" value="Button"/>
+	</form>
+</p>
+<br>
+<div>
+	<p>Here are links to viewing users index and adding to it</p>
+	<p><%= link_to "Users Index", users_path %></p>
+	<p><%= link_to "Add 'User'", new_user_path(@user) %></p>
+</div>
+<br>
+<div>
+	<p>Here are links to viewing admins index and adding to it</p>
+	<p><%= link_to "Admins Index", admins_path %></p>
+	<p><%= link_to "Add 'Admin'", new_admin_path(@admin) %></p>
+</div>

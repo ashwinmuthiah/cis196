@@ -1,6 +1,13 @@
 Cis196::Application.routes.draw do
 
-   root :to => 'pages#home'
+  resources :admins
+
+  resources :users
+
+  get "landing_pages/home"
+
+  root :to => 'landing_pages#home'
+   # root :to => 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
