@@ -1,3 +1,3 @@
 This is the CIS 196 Application. I configured the project, and here is the link to the Heroku page: http://warm-dawn-7165.herokuapp.com/
 
-I added two tables to the schema - one following along the example in class and another "Admin" one for admins on the site. No real issues with this assignment, and not sure what I want to build yet. Once I figure that out, I imagine this webapp will get a lot more interesting.
+Added validations. Not sure how to get the error messages to show when there is an error though. It just re-renders the page.
