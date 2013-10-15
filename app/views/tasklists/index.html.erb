@@ -1,0 +1,13 @@
+<table>
+	<tr>
+		<td>title</td>
+		<td>user</td>
+
+	</tr>
+	<% @tasklists.each do |tasklist| %>
+	<tr>
+		<td><%= tasklist.title %></p>
+		<td><%= tasklist.user %></td>
+	</tr>
+	<%end%>
+</table>

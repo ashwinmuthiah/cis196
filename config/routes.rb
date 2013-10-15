@@ -1,6 +1,8 @@
 Cis196::Application.routes.draw do
 
-  resources :admins
+resources :tasklists
+
+  resources :admins # Gives all seven methods: new, edit, update, etc.
 
   resources :users
 
