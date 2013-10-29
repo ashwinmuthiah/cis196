@@ -8,6 +8,7 @@
 	<tr>
 		<td><%= tasklist.title %></p>
 		<td><%= tasklist.user %></td>
+		<td><%= link_to "destroy tasklist", tasklist, confirm: "You sure?", method: :delete %></td>
 	</tr>
 	<%end%>
 </table>
