@@ -1,3 +1,16 @@
 This is the CIS 196 Application. I configured the project, and here is the link to the Heroku page: http://warm-dawn-7165.herokuapp.com/
 
-Added validations. Not sure how to get the error messages to show when there is an error though. It just re-renders the page.
+I added the Devise gem.
+
+The Heroku push was rejected, and I haven't been able to figure out why yet. It says: "rake aborted!
+       could not connect to server: Connection refused
+       Is the server running on host "127.0.0.1" and accepting
+       TCP/IP connections on port 5432?"
+
+"       Tasks: TOP => environment
+       (See full trace by running task with --trace)
+ !
+ !     Precompiling assets failed.
+ !
+
+ !     Push rejected, failed to compile Ruby/Rails app"
