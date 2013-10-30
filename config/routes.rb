@@ -2,11 +2,11 @@ Cis196::Application.routes.draw do
 
   devise_for :users
 
-resources :tasklists
+  resources :tasklists
 
   resources :admins # Gives all seven methods: new, edit, update, etc.
 
-  # resources :users
+  resources :users
 
   get "landing_pages/home"
 
