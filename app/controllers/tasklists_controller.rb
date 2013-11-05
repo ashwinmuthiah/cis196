@@ -18,9 +18,6 @@ class TasklistsController < ApplicationController
     if @tasklist.save
       Notifications.new_tasklist(@tasklist).deliver
      	redirect_to root_path
-  	else
-  		render "new"
-    end
   end
 
     def destroy
