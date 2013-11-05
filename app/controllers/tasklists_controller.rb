@@ -14,12 +14,13 @@ class TasklistsController < ApplicationController
   	@tasklist = Tasklist.new(params[:tasklist]) # Need more code here - missed it in class
   	if @tasklist.user_id != current_user.id
       render "new"
-    end
-    if @tasklist.save
-      Notifications.new_tasklist(@tasklist).deliver
-     	redirect_to tasklists_path
-  	else
-  		render "new"
+    else
+      if @tasklist.save
+        Notifications.new_tasklist(@tasklist).deliver
+     	  redirect_to tasklists_path
+  	 else
+    		render "new"
+      end
     end
   end
 
