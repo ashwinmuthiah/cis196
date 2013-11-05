@@ -2,6 +2,16 @@ Cis196::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
+  config.action_mailer.default_url_options={:host => "http://warm-dawn-7165.herokuapp.com/"}
+
+  config.action_mailer.smtp_settings = {
+    :address => 'smtp.sendgrid.net'
+    :port => '587'
+    :user_name => ENV['SENDGRID_USERNAME']
+    :password => ENV['SENDGRID_PASSWORD']
+    :domain => ENV['SENDGRID_DOMAIN']
+  }
+
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on

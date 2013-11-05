@@ -8,6 +8,7 @@ gem 'bootstrap'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
 	gem 'sqlite3'
+	gem 'letter_opener', github: 'ryanb/letter_opener'
 end
 
 group :production do
