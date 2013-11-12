@@ -1,5 +1,6 @@
 class Tasklist < ActiveRecord::Base
+  belongs_to :user
 
-	belongs_to :user
-  attr_accessible :title, :user, :user_id
+  has_many :todos, :dependent => :destroy
+  attr_accessible :title, :user_id
 end

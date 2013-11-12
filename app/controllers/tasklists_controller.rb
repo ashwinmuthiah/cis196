@@ -1,6 +1,6 @@
 class TasklistsController < ApplicationController
   def index
-  	@tasklists = Tasklist.all
+  	@tasklists = Tasklist.all #.order("order...") or .limit(10) or .first(3), etc.
   end
 
   def new

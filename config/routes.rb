@@ -3,6 +3,7 @@ Cis196::Application.routes.draw do
   devise_for :users
 
   resources :tasklists
+  resources :todos
 
   resources :admins # Gives all seven methods: new, edit, update, etc.
 
