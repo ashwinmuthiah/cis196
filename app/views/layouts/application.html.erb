@@ -50,12 +50,16 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Todos <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><%= link_to "newlist", new_todo_path %></li>
+          <li><%= link_to "todos", todos_path %></li>
         </ul>
       </li>
     </ul>
 </nav>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+<script>
+  $('.dropdown-toggle').dropdown();
+</script>
 <%= yield %>
 
 </body>

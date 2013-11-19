@@ -1,3 +1,3 @@
 This is the CIS 196 Application. I configured the project, and here is the link to the Heroku page: http://warm-dawn-7165.herokuapp.com/
 
-I added todos and scopes in my todos.
+I added javascript to give an alert everytime a page loads. Also, if you click on the title of todo's on the todos index, it will turn blue.
