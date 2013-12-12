@@ -1,3 +1,3 @@
-This is the CIS 196 Application. I configured the project, and here is the link to the Heroku page: http://warm-dawn-7165.herokuapp.com/
+This is the CIS 196 Application. Here is the link to the Heroku page: http://warm-dawn-7165.herokuapp.com/
 
-I added javascript to give an alert everytime a page loads. Also, if you click on the title of todo's on the todos index, it will turn blue.
+The app is a polished version of what we have been building in class. It is a tasklist application, where you can keep track of things you need to do and delete tasks as you compelte them. You can also look at other people's tasks to see what other people are up to. Because I don't have much of an eye for design, the styling is minimalist but consistent. Gems used include LetterOpener, Bootstrap, and Devise. The Heroku add-on used was the one from class. Here is documentation for all the gems: https://github.com/ryanb/letter_opener, http://getbootstrap.com/, https://github.com/plataformatec/devise. LetterOpener allows you to simulate sending emails to users. Bootstrap adds javascript and css to make the app look nicer. Devise gives you an authentication system. 
