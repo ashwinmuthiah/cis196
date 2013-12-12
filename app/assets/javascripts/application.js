@@ -15,4 +15,10 @@
 //= require_tree .
 //= require bootstrap
 
+$(function(){
+	$('#search').click(function(e){
+		$("#input-searched").val();
+	})
+})
+
 

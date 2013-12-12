@@ -10,6 +10,7 @@ Cis196::Application.routes.draw do
   resources :users
 
   get "landing_pages/home"
+  get "users/for/:search_params", to: "users#searched", as: "search"
 
   root :to => 'landing_pages#home'
    # root :to => 'pages#home'

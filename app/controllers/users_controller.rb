@@ -7,6 +7,11 @@ class UsersController < ApplicationController
   	@users = User.all
   end
 
+  def searched # FOR SEARCHING!
+    @users = User.where("name LIKE ?", "%" + params[:search_params] +"%")
+    render 'index' # render doesn't redirect (or reload), it just renders a view
+  end
+
  #  def create
  #  	@user = User.new(params[:user])
  #  	if @user.save

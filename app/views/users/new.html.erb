@@ -1,6 +1,6 @@
 <div class="error-msg">
 
-</div>
+
 
 <%= form_for(@user) do |f| %>
 <!-- Need message for if not valid entry! -->
@@ -13,23 +13,26 @@
     </ul>
   <%end%>
 
+  </div class="container-fluid">
+
  	<div class="field">
-    <p>name</p> 
+    <p>Name</p> 
   		<%= f.text_field :name%>
   </div>
   <div class="field">
-    <p>email</p> 
+    <p>Email</p> 
       <%= f.text_field :email%>
   </div>
   <div class="field">
-    <p>password</p> 
+    <p>Password</p> 
     <%= f.text_field :password%>
   </div>
   <div class="field">
-    <p>password confirmation</p> 
+    <p>Password confirmation</p> 
     <%= f.text_field :password_confirmation%>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

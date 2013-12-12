@@ -3,7 +3,8 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 */
 
-$(function(){
+/*$(function(){
 	alert("here is some javascript at work!");
 });
 
+*/

@@ -8,18 +8,34 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default " role="navigation">
+	<nav class="navbar navbar-default " role="navigation" style="color: black;">
   <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <a class="navbar-brand" href="#">Tasks</a>
-  </div>
+<!--   <div class="navbar-header">
+    <a class="navbar-brand" href="/">Home</a>
+  </div> -->
+
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Home", root_path %></li>
+    </ul>
 
     <ul class="nav navbar-nav">
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Users <b class="caret"></b></a>
         <ul class="dropdown-menu">
+          <% if !user_signed_in?%>
           <li><%= link_to "new user", new_user_session_path %></li>
-          <li><%= link_to "home", root_path %></li>
+          <% end %>
+          <li><%= link_to "all users", users_path %></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lists <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "newlist", new_tasklist_path %></li>
+          <li><%= link_to "lists", tasklists_path %></li>
         </ul>
       </li>
     </ul>
@@ -35,31 +51,23 @@
       </li>
       <% end %>
     </ul>
-
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lists <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><%= link_to "newlist", new_tasklist_path %></li>
-          <li><%= link_to "lists", tasklists_path %></li>
-        </ul>
+<!--     <ul class="nav navbar-nav">
+      <div class="input group" style="width: 300px; padding-top: 10px;">
+        <input id="input-searched" type="text" class="form-control input-sm" placeholder="search users">
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-sm" id="search" type="button">Go</button>
+        </span>
       </li>
-    </ul>
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Todos <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><%= link_to "newlist", new_todo_path %></li>
-          <li><%= link_to "todos", todos_path %></li>
-        </ul>
-      </li>
-    </ul>
+    </ul> -->
+          <!-- NOT DONE YET - MORE CODE NEEDED!!! -->
 </nav>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<!-- <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p> -->
 <script>
   $('.dropdown-toggle').dropdown();
 </script>
+<br>
+<br>
 <%= yield %>
 
 </body>

@@ -1,30 +1,35 @@
-<h1>Ashwin Muthiah - CIS 196</h1>
-
-<p><%= link_to "My github page", "https://github.com/ashwinmuthiah" %></p>
-
-<p>Here is a form:
-
-	<form action = "aform.html" method="post">
-		<input type="radio" name="radio-btn" value="1">Choice 1
-		<input type="checkbox" name="checkbox" value="2">Check here
-		<input type="submit" value="Button"/>
-	</form>
-</p>
+<div class="container-fluid"><h1><%= link_to "Ashwin Muthiah", "https://github.com/ashwinmuthiah" %>  - CIS 196</h1></div>
 <br>
-<div>
-	<p>Here are links to viewing users index and adding to it</p>
-	<p><%= link_to "Add 'User'", new_user_registration_path %></p>
-</div>
-<br>
-<div>
-	<p>Here are links to viewing admins index and adding to it</p>
-	<p><%= link_to "Admins Index", admins_path %></p>
-	<p><%= link_to "Add 'Admin'", new_admin_path(@admin) %></p>
-</div>
+<div class="container-fluid">
 
-<br>
-<div>
-	<p>Here are links to viewing tasklists index and adding to it</p>
-	<p><%= link_to "Tasklists Index", tasklists_path %></p>
-	<p><%= link_to "Add Tasklist", new_tasklist_path(@tasklist) %></p>
+	<!-- <p>Here is a form:
+
+		<form action = "aform.html" method="post">
+			<input type="radio" name="radio-btn" value="1">Choice 1
+			<input type="checkbox" name="checkbox" value="2">Check here
+			<input type="submit" value="Button"/>
+		</form>
+	</p>
+	<br> -->
+	<br>
+	<div>
+		<p>Here are links to viewing users index and adding to it</p>
+		<% if user_signed_in?%>
+		<% end %>
+		<a type="button" class="btn btn-default" href="users">User's Index</a>
+	</div>
+	<br>
+	<br>
+	<div>
+		<p>Here are links to viewing admins index and adding to it</p>
+		<a type="button" class="btn btn-default" href="admins">Admins Index</a>
+		<a type="button" class="btn btn-default" href="admins/new">New Admin</a>
+	</div>
+	<br>
+	<br>
+	<div>
+		<p>Here are links to viewing tasklists index and adding to it</p>
+		<p><%= link_to "Tasklists Index", tasklists_path %></p>
+		<p><%= link_to "Add Tasklist", new_tasklist_path(@tasklist) %></p>
+	</div>
 </div>

@@ -1,14 +1,18 @@
-<table>
+<div class="container-fluid">
+<table class="table">
 	<tr>
-		<td>title</td>
-		<td>user</td>
+		<td><strong>Title</strong></td>
+		<td><strong>User</strong></td>
+		<td><strong>ID</strong></td>
 
 	</tr>
 	<% @tasklists.each do |tasklist| %>
 	<tr>
-		<td><%= tasklist.title %></p>
-		<td><%= tasklist.user %></td>
-		<td><%= link_to "destroy tasklist", tasklist, confirm: "You sure?", method: :delete %></td>
+		<td><%= tasklist.title %></td>
+		<td><%= tasklist.user.name %></td>
+		<td><%= tasklist.id %></td>
+		<td><%= link_to "Destroy Tasklist", tasklist, confirm: "You sure?", method: :delete %></td>
 	</tr>
 	<%end%>
 </table>
+</div>

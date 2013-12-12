@@ -1,3 +1,41 @@
+<%= form_for(@todo, remote: true) do |f| %> <!-- remote: true says call to ajax -->
+  <% if @todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+      <% @todo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.select(:priority, options_for_select([['high', 'high'], ['medium', 'medium'], ['low', 'low']], 3)) %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :completed %><br />
+    <%= f.check_box :completed %>
+  </div>
+  <div class="field">
+    <%= f.label :Tasklist %><br />
+    <%= f.collection_select :Tasklist_id, Tasklist.all, :id, :title%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 <h1 id="title">Listing todos</h1>
 
 <table>
@@ -9,42 +47,5 @@
     <th>Tasklist</th>
   </tr>
 
-<% @todos.high_priority.each do |todo| %>
-  <tr class="row">
-    <td><%= todo.title %></td>
-    <td><%= todo.priority %></td>
-    <td><%= todo.description %></td>
-    <td><%= todo.completed %></td>
-    <td><%= todo.Tasklist.title %></td>
-    <td><%= link_to 'Show', todo %></td>
-    <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-    <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
 
-<% @todos.med_priority.each do |todo| %>
-  <tr class="row">
-    <td><%= todo.title %></td>
-    <td><%= todo.priority %></td>
-    <td><%= todo.description %></td>
-    <td><%= todo.completed %></td>
-    <td><%= todo.Tasklist.title %></td>
-    <td><%= link_to 'Show', todo %></td>
-    <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-    <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-
-<% @todos.low_priority.each do |todo| %>
-  <tr class="row">
-    <td><%= todo.title %></td>
-    <td><%= todo.priority %></td>
-    <td><%= todo.description %></td>
-    <td><%= todo.completed %></td>
-    <td><%= todo.Tasklist.title %></td>
-    <td><%= link_to 'Show', todo %></td>
-    <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-    <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
 </table>
